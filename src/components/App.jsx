@@ -1,5 +1,6 @@
 import React from 'react';
 import Profile from '../profile/Profile.jsx';
+import Statistics from '../statistics/statistics.jsx';
 
 export const App = () => {
   return (
@@ -13,7 +14,16 @@ export const App = () => {
         color: '#010101',
       }}
     >
-      <Profile />
+      <Profile
+        username={Profile.username}
+        tag={Profile.tag}
+        location={Profile.location}
+        avatar={Profile.avatar}
+        stats={Profile.stats}
+      />
+      <Statistics/>
     </div>
   );
 };
+
+

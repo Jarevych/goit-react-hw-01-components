@@ -1,21 +1,16 @@
 import React from 'react';
-import UserData from '../profile/user.json';
+import UserData from './user.json';
 
 const Profile = () => {
   const { username, tag, location, avatar, stats } = UserData;
   return (
     <div class="profile">
       <div class="description">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-          alt="User avatar"
-          class="avatar"
-        />
+        <img src={avatar} alt={tag} class="avatar" />
         <p class="name">{username}</p>
         <p class="tag">@{tag}</p>
         <p class="location">{location}</p>
       </div>
-
       <ul class="stats">
         <li>
           <span class="label">Followers</span>
