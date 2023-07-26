@@ -1,5 +1,4 @@
 import TransactionItem from "./TransactionItem";
-import transactions from './transactions.json';
 
 const TransactionHistory = ({ items }) => {
     return (

@@ -1,4 +1,3 @@
-import statData from '../data/data.json';
 import Stat from '../data/statistics';
 
 const Statistic = ({ statData }) => {

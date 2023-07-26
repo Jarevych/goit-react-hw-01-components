@@ -1,5 +1,4 @@
 import FriendListItem from './FriendListItem';
-import friendsData from './friends.json';
 
 const FriendList = ({ friends }) => {
   return (

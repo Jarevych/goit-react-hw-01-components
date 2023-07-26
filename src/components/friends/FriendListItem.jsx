@@ -1,5 +1,3 @@
-import friendsData from './friends.json';
-
 const FriendListItem = ({ avatar, name, isOnline, id }) => {
   return (
     <li class="item">
