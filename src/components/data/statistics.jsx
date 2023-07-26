@@ -1,8 +1,6 @@
 import React from 'react';
 
-
-const Stat = ({ id, label, percentage }) => {
-  // const  = StatData;
+const Stat = ({ label, percentage }) => {
   return (
     <li class="item">
       <span class="label">{label}</span>

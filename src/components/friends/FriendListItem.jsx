@@ -1,4 +1,4 @@
-const FriendListItem = ({ avatar, name, isOnline, id }) => {
+const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <li class="item">
       <span className={`status ${isOnline ? 'online' : 'offline'}`}></span>
