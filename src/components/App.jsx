@@ -2,6 +2,8 @@ import React from 'react';
 import Profile from './profile/Profile.jsx';
 import Statistics from './statistics/stat.jsx';
 import statData from '../components/data/data.json';
+import FriendList from './friends/FliendList.jsx';
+import friendsData from './friends/friends.json';
 
 export const App = () => {
   return (
@@ -23,6 +25,7 @@ export const App = () => {
         stats={Profile.stats}
       />
  <Statistics statData={statData} /> 
+ <FriendList friends={friendsData} />
     </div>
   );
 };
