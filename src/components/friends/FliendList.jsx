@@ -1,12 +1,5 @@
 import FriendListItem from './FriendListItem';
-import styled from 'styled-components';
-
-const FriendsList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  gap: 10px;
-`;
+import { FriendsList } from '../styles/FriendsStyles';
 
 const FriendList = ({ friends }) => {
   return (

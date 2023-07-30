@@ -1,82 +1,7 @@
 import React from 'react';
-import UserData from './user.json';
-import styled from 'styled-components';
-
-const ProfileContainer = styled.div`
-  display: flex;
-  width: 300px;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-family: Roboto, sans-serif;
-  background-color: #fFF;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-`;
-
-const ProfileBlock = styled.div`
-  display: flex;
-  width: 260px;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-family: Arial, sans-serif;
-  background-color: #fFF;
-  border-radius: 8px;
-  padding: 20px;
-`
-
-const Avatar = styled.img`
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-`;
-
-const Name = styled.p`
-  font-size: 24px;
-  font-weight: bold;
-  margin: 0;
-`;
-
-const Tag = styled.p`
-  font-size: 16px;
-  color: #666;
-  margin: 0;
-`;
-
-const Location = styled.p`
-  font-size: 16px;
-  margin: 10px 0;
-`;
-
-const StatsList = styled.ul`
-  list-style: none;
-  padding: 0;
-  display: flex;
-  font-size: 0;
-  background-color: #e5e7eb;
-`;
-
-const StatItem = styled.li`
-  width: 98px;
-  padding: 10px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #cbd5e1;
-
-  .label {
-    font-size: 16px;
-    color: #666;
-  }
-
-  .quantity {
-    font-size: 24px;
-    font-weight: bold;
-  }
-`;
+import UserData from '../data/user.json';
+import PropTypes from "prop-types";
+import { ProfileContainer, ProfileBlock, Avatar, Name, Tag, Location, StatsList, StatItem } from '../styles/ProfileStyles'
 
 const Profile = () => {
   const { username, tag, location, avatar, stats } = UserData;
@@ -105,4 +30,11 @@ const Profile = () => {
     </ProfileContainer>
   );
 };
+Profile.propTypes = {
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  stats: PropTypes.number,
+}
 export default Profile;

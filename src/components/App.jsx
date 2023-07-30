@@ -3,16 +3,16 @@ import Profile from './profile/Profile.jsx';
 import Statistics from './statistics/stat.jsx';
 import statData from '../components/data/data.json';
 import FriendList from './friends/FliendList.jsx';
-import friendsData from './friends/friends.json';
+import friendsData from './data/friends.json';
 import TransactionHistory from './TransactionHistory/TransactionHistory.jsx';
-import transactions from './TransactionHistory/transactions.json';
+import transactions from './data/transactions.json';
 
 export const App = () => {
   return (
     <div
       style={{
+        margin: '20px auto',
         width: '1440px',
-        // height: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',

@@ -1,14 +1,6 @@
-import Stat from '../data/statistics';
-import styled from 'styled-components';
-
-const StatContainer = styled.div`
-  display: flex;
-`;
-const StatList = styled.ul`
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  `;
+import Stat from './statistics';
+import { StatContainer, StatList } from '../styles/StatisticsStyles';
+import PropTypes from "prop-types";
 
 const Statistic = ({ statData }) => {
   return (
@@ -21,5 +13,9 @@ const Statistic = ({ statData }) => {
     </StatContainer>
   );
 };
-
+Statistic.propTypes = {
+  id: PropTypes.number,
+  label: PropTypes.string,
+  percentage: PropTypes.number,
+}
 export default Statistic;

@@ -1,33 +1,12 @@
 import TransactionItem from './TransactionItem';
-import styled from 'styled-components';
-
-const Table = styled.table`
-  border-collapse: collapse;
-  width: 80%;
-  color: #6f7474;
-  font-family: Segoe, sans-serif;
-  font-size: 24px;
-  th,
-  td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-  }
-
-  th {
-    background-color: #f2f2f2;
-  }
-  .table-row th {
-    background-color: #bfd9f6;
-  }
-`;
+import { Table } from '../styles/TransactionStyles';
+import PropTypes from "prop-types";
 
 const TransactionHistory = ({ items }) => {
   return (
     <Table>
       <thead>
-        <tr className='table-row'>
-
+        <tr className="table-row">
           <th>Type</th>
           <th>Amount</th>
           <th>Currency</th>
@@ -45,4 +24,10 @@ const TransactionHistory = ({ items }) => {
     </Table>
   );
 };
+TransactionHistory.propTypes = {
+  id: PropTypes.number,
+  type: PropTypes.string,
+  amount: PropTypes.number,
+  currency: PropTypes.string,
+}
 export default TransactionHistory;
