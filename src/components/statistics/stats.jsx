@@ -1,8 +1,8 @@
 import React from 'react';
-import { StatItem } from '../styles/StatisticsStyles'
-import PropTypes from "prop-types";
+import { StatItem } from '../styles/statsStyles';
+import PropTypes from 'prop-types';
 
-const Stats = ({ label, percentage, title }) => {
+const Stats = ({ label, percentage }) => {
   return (
     <StatItem>
       <span className="label">{label}</span>
@@ -14,6 +14,5 @@ const Stats = ({ label, percentage, title }) => {
 Stats.propTypes = {
   label: PropTypes.string,
   percentage: PropTypes.number,
-  title: PropTypes.string,
-}
+};
 export default Stats;

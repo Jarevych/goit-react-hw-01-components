@@ -1,40 +1,24 @@
 import styled from 'styled-components';
 
-export const StatItem = styled.li`
+export const StatContainer = styled.div`
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
-  background-color: ${props => randomColor()};
-  font-size: 18px;
-  line-height: 1.2;
-  color: #fff;
-  padding: 10px 15px;
-  width: 60px;
-  .label {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  .quantity {
-    font-size: 24px;
-    font-weight: bold;
-  }
-`;
-export const StatContainer = styled.div`
-  display: flex;
 `;
 export const StatList = styled.ul`
   display: flex;
   flex-direction: row;
   padding: 0;
+  margin: 0;
 `;
 export const StatTitle = styled.h2`
+  text-transform: uppercase;
   font-size: 24px;
-  margin-bottom: 16px;
   color: #333;
+  padding: 20px 0;
+  margin: 0;
+  background-color: beige;
+  width: 100%;
 `;
-
-const randomColor = () => {
-  const randomValue = () => Math.floor(Math.random() * 255);
-  return `rgb(${randomValue()}, ${randomValue()}, ${randomValue()})`;
-};
-

@@ -22,7 +22,7 @@ export const App = () => {
         color: '#010101',
       }}
     >
-      <Profile {...UserData}/>
+      <Profile {...UserData} />
       <Statistics stats={stats} />
       <FriendList friends={friendsData} />
       <TransactionHistory items={transactions} />
