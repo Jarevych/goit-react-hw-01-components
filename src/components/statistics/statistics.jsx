@@ -1,4 +1,3 @@
-import React from 'react';
 import Stats from './stats';
 import { StatContainer, StatList, StatTitle } from '../styles/StatisticsStyles';
 import PropTypes from 'prop-types';
