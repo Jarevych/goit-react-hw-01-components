@@ -3,6 +3,8 @@ import {
   OnlineStatusCircle,
   OfflineStatusCircle,
 } from '../styles/FriendsStyles';
+import PropTypes from 'prop-types';
+
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
@@ -13,4 +15,10 @@ const FriendListItem = ({ avatar, name, isOnline }) => {
     </FriendItem>
   );
 };
+
+FriendListItem.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  isOnline: PropTypes.bool,
+}
 export default FriendListItem;

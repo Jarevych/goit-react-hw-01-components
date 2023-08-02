@@ -1,18 +1,28 @@
 import React from 'react';
-import { StatItem } from '../styles/StatisticsStyles'
+import Stats from './stats';
+import { StatContainer, StatList, StatTitle } from '../styles/StatisticsStyles';
 import PropTypes from "prop-types";
 
-const Stat = ({ label, percentage }) => {
+const Statistics = ({ title, stats }) => {
   return (
-    <StatItem>
-      <span class="label">{label}</span>
-      <span class="percentage">{percentage}%</span>
-    </StatItem>
+    <StatContainer>
+       {title && <StatTitle>{title}</StatTitle>}
+      <StatList>
+        {stats.map(({ id, label, percentage }) => {
+          return <Stats id={id} label={label} percentage={percentage} />;
+        })}
+      </StatList>
+    </StatContainer>
   );
 };
-
-Stat.propTypes = {
-  label: PropTypes.string,
-  percentage: PropTypes.number,
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ).isRequired,
 }
-export default Stat;
+export default Statistics;

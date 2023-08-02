@@ -1,11 +1,12 @@
 import React from 'react';
 import Profile from './profile/Profile.jsx';
-import Statistics from './statistics/stat.jsx';
-import statData from '../components/data/data.json';
+import UserData from '../data/user.json';
+import Statistics from './statistics/statistics.jsx';
+import stats from '../data/data.json';
 import FriendList from './friends/FliendList.jsx';
-import friendsData from './data/friends.json';
+import friendsData from '../data/friends.json';
 import TransactionHistory from './TransactionHistory/TransactionHistory.jsx';
-import transactions from './data/transactions.json';
+import transactions from '../data/transactions.json';
 
 export const App = () => {
   return (
@@ -21,14 +22,8 @@ export const App = () => {
         color: '#010101',
       }}
     >
-      <Profile
-        username={Profile.username}
-        tag={Profile.tag}
-        location={Profile.location}
-        avatar={Profile.avatar}
-        stats={Profile.stats}
-      />
-      <Statistics statData={statData} />
+      <Profile {...UserData}/>
+      <Statistics stats={stats} />
       <FriendList friends={friendsData} />
       <TransactionHistory items={transactions} />
     </div>
