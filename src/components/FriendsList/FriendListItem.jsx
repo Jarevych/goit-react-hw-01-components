@@ -2,7 +2,7 @@ import {
   FriendItem,
   OnlineStatusCircle,
   OfflineStatusCircle,
-} from '../styles/FriendListItemStyles';
+} from './FriendListItemStyles';
 import PropTypes from 'prop-types';
 
 

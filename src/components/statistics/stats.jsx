@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatItem } from '../styles/statsStyles';
+import { StatItem } from './statsStyles';
 import PropTypes from 'prop-types';
 
 const Stats = ({ label, percentage }) => {

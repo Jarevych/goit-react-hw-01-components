@@ -1,4 +1,4 @@
-import { TableRow } from '../styles/TransactionItemStyles';
+import { TableRow } from './TransactionItemStyles';
 import PropTypes from "prop-types";
 
 const TransactionItem = ({ type, amount, currency }) => {

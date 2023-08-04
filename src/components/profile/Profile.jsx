@@ -9,7 +9,7 @@ import {
   Location,
   StatsList,
   StatItem,
-} from '../styles/ProfileStyles';
+} from './ProfileStyles';
 
 const Profile = ({username, tag, location, avatar, stats}) => {
   return (
